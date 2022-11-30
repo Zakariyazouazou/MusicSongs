@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="lecteur-de-musique.png">
+    <link rel="stylesheet" href="music.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="music.css">
+    <title>music</title>
+</head>
+<body class="body">
+
+
+
+    <section class="card" id="card">
+       <div class="identification">
+           <div class="song_number" id="song_number">2 </div>
+           <div class="song_pic" id="song_pic"> </div>
+           <div class="song_art" id="song_art">art</div>
+           <div class="song_artiste" id="song_artiste">artiste</div>
+       </div>
+       <div class="range_timr">
+         <label for="customRange1" class="form-label range_time" id="range_time">00:00</label>
+         <input type="range" class="form-range range_valeur" id="customRange"  onclick="time_contrle()">
+         <label for="customRange1" class="form-label range_time_rest" id="range_time_rest">00:00</label>
+       </div>
+       <div class="volume_range">
+        <i class="fa-sharp fa-solid fa-volume-off"></i>
+        <input type="range" class="form-range range_volume1" min="1" max="100" value="99" id="customRange1" onclick="volume_valeur()">
+        <i class="fa-sharp fa-solid fa-volume-high"></i>
+       </div>
+       <div class="controls">
+          <div class="basic_contrls" id="shuffle_button" onclick="random()"><i class="fa-solid fa-shuffle "></i></div>
+          <div class="basic_contrls"   onclick="pre_play()"><i class="fa-solid fa-backward-fast " id="previous"></i>  </div>
+          <div class="basic_contrls " id="backward-fast_button" onclick="play_pause()"><i class="fa-solid fa-play " ></i></div>
+          <div class="basic_contrls"  onclick="next_play()"><i class="fa-solid fa-forward-fast css" id="next"></i></div>
+          <div class="basic_contrls"  onclick="reset()"> <i class="fa-solid fa-arrow-rotate-left css" id="retry"></i></div>
+       </div>
+
+       <div id="wave" class="wave">
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+     </div> 
+    </section>
+
+
+
+
+    <script src="music.js"></script>
+</body>
+</html>
